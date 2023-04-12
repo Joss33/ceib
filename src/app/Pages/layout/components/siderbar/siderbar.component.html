@@ -1,0 +1,81 @@
+<div class="h-full relative px-4 py-5 transition-all z-20">
+  <div
+    class="h-full relative transition-all duration-500 drop-shadow-md py-5 px-3 bg-emerald-400 rounded-lg overflow-x-hidden "
+    [ngClass]="{'w-64': stateSiderbar, 'w-16': !stateSiderbar}">
+    <ul class="flex flex-col font-medium text-gray-700 mb-5">
+      <li class="flex items-center">
+        <span class="font-bold text-2xl text-white block mr-auto" *ngIf="stateSiderbar">
+          Wemi
+        </span>
+        <button type="button" (click)="stateSiderbar = !stateSiderbar"
+          class=" flex justify-center items-center rounded-full w-10 h-10 ml-auto text-white hover:bg-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-offset-1 focus:ring-offset-emerald-500 transition-all">
+          <ng-container *ngIf="!stateSiderbar">
+            <fa-icon [icon]="['fas','angles-right']"></fa-icon>
+          </ng-container>
+          <ng-container *ngIf="stateSiderbar">
+            <fa-icon [icon]="['fas','angles-left']"></fa-icon>
+          </ng-container>
+        </button>
+      </li>
+
+    </ul>
+    <ul class="flex flex-col font-medium text-gray-700 mb-3">
+      <li class="mb-2">
+        <a title="Dashboard" role="button"
+          class=" flex items-center gap-4 p-3 rounded-lg text-white hover:bg-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-offset-1 focus:ring-offset-emerald-500 transition-all">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <fa-icon [icon]="['fas','book-open']"></fa-icon>
+          </div>
+          <ng-container *ngIf="stateSiderbar">
+            Dashboard
+          </ng-container>
+        </a>
+      </li>
+      <li class="mb-2">
+        <a title="Contabilidad" role="button"
+          class=" flex items-center gap-4 p-3 rounded-lg text-white hover:bg-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-offset-1 focus:ring-offset-emerald-500 transition-all">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <fa-icon [icon]="['fas','file-contract']"></fa-icon>
+          </div>
+          <ng-container *ngIf="stateSiderbar">
+            Contabilidad
+          </ng-container>
+        </a>
+      </li>
+      <li class="mb-2">
+        <a title="Procesos" role="button"
+          class=" flex items-center gap-4 p-3 rounded-lg text-white hover:bg-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-offset-1 focus:ring-offset-emerald-500 transition-all">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <fa-icon [icon]="['fas','chart-simple']"></fa-icon>
+          </div>
+          <ng-container *ngIf="stateSiderbar">
+            Procesos
+          </ng-container>
+        </a>
+      </li>
+      <li class="mb-2">
+        <a title="Parametrizaciones" role="button"
+          class=" flex items-center gap-4 p-3 rounded-lg text-white hover:bg-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-offset-1 focus:ring-offset-emerald-500 transition-all">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <fa-icon [icon]="['fas','sitemap']"></fa-icon>
+          </div>
+          <ng-container *ngIf="stateSiderbar">
+            Parametrizaciones
+          </ng-container>
+        </a>
+      </li>
+      <li class="mb-2">
+        <a title="Reportes" role="button"
+          class=" flex items-center gap-4 p-3 rounded-lg text-white hover:bg-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-offset-1 focus:ring-offset-emerald-500 transition-all">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <fa-icon [icon]="['fas','sitemap']"></fa-icon>
+          </div>
+          <ng-container *ngIf="stateSiderbar">
+            Reportes
+          </ng-container>
+        </a>
+      </li>
+    </ul>
+    <hr>
+  </div>
+</div>

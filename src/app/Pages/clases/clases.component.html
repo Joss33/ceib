@@ -1,0 +1,434 @@
+<div class="shadow bg-white rounded-lg p-5 mb-5">
+  <div class="flex">
+    <p class="font-bold text-emerald-600 mb-5 text-2xl">
+      Clases
+    </p>
+    <div class="flex items-center gap-2.5 ml-auto">
+      <div class="h-10 flex items-center border rounded-full border-emerald-600 overflow-hidden">
+        <div class="w-12 h-12 flex justify-center items-center text-emerald-600">
+          <fa-icon [icon]="['fas', 'magnifying-glass']"></fa-icon>
+        </div>
+        <input type="text" placeholder="Buscar..."
+          class="pl-0 border-0 placeholder-emerald-900 text-emerald-900 focus-within:ring-0 focus:ring-0 focus-within:outline-0 focus:outline-0">
+      </div>
+      <button aria-expanded="false" (click)="isOpenFilter = !isOpenFilter" cdkOverlayOrigin
+        #menuOverlayFilter="cdkOverlayOrigin" type="button"
+        class="h-10 font-bold text-emerald-600 border border-emerald-600 rounded-full text-center flex items-center text-sm pr-4">
+        <div class="w-10 h-10 flex items-center justify-center">
+          <fa-icon [icon]="['fas','filter']"></fa-icon>
+        </div>
+        Filtrar
+      </button>
+
+      <button type="button"
+        class="h-10 font-bold text-emerald-600 border border-emerald-600 rounded-full text-center flex items-center text-sm pr-4">
+        <div class="w-10 h-10 flex items-center justify-center">
+          <fa-icon [icon]="['fas','trash']"></fa-icon>
+        </div>
+        Eliminar
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="text-sm font-medium text-center text-emerald-900 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mb-3">
+    <ul class="flex flex-wrap -mb-px">
+      <li class="mr-2">
+        <a href="#"
+          class="inline-block py-3 px-8 text-emerald-500 border-b-2 border-emerald-500 rounded-t-lg active dark:text-emerald-500 dark:border-emerald-500"
+          aria-current="page">
+          <div class="flex items-center">
+            <small class="mr-3 font-bold">
+              Usuarios
+            </small>
+            <span
+              class="bg-emerald-100 text-emerald-500 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-emerald-900 dark:text-emerald-300"><small>240</small></span>
+
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <table class="border-collapse table-fixed w-full text-sm">
+    <thead>
+      <tr>
+        <th
+          class="border-b dark:border-slate-600 text-xs text-center font-medium p-3 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200">
+          <div class="flex items-center justify-center">
+            <input checked id="checked-checkbox" type="checkbox" value=""
+              class="w-4 h-4 text-emerald-400 bg-emerald-100 border-emerald-300 rounded focus:ring-emerald-500 dark:focus:ring-emerald-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ">
+            <fa-icon [icon]="['fas','sort']" class="ml-3"></fa-icon>
+          </div>
+        </th>
+        <th
+          class="border-b dark:border-slate-600 text-xs text-center font-medium p-3 pt-0 pb-3 text-slate-400 dark:text-slate-200">
+          <fa-icon [icon]="['fas','sort']"></fa-icon>
+          NOMBRE
+        </th>
+        <th
+          class="border-b dark:border-slate-600 text-xs text-center font-medium p-3 pt-0 pb-3 text-slate-400 dark:text-slate-200">
+          <fa-icon [icon]="['fas','sort']"></fa-icon>
+          Profesor
+        </th>
+        <th
+          class="border-b dark:border-slate-600 text-xs text-center font-medium p-3 pt-0 pb-3 text-slate-400 dark:text-slate-200">
+          <fa-icon [icon]="['fas','sort']"></fa-icon>
+          Tipo de curso
+        </th>
+        <th
+          class="border-b dark:border-slate-600 text-xs text-center font-medium p-3 pt-0 pb-3 text-slate-400 dark:text-slate-200">
+          <fa-icon [icon]="['fas','sort']"></fa-icon>
+          Precio
+        </th>
+        <th
+          class="border-b dark:border-slate-600 text-xs text-center font-medium p-3 pt-0 pb-3 text-slate-400 dark:text-slate-200">
+          <fa-icon [icon]="['fas','sort']"></fa-icon>
+          Fecha
+        </th>
+        <th
+          class="border-b dark:border-slate-600 text-xs text-center font-medium p-3 pt-0 pb-3 text-slate-400 dark:text-slate-200">
+          <fa-icon [icon]="['fas','sort']"></fa-icon>
+          Acciones
+        </th>
+        <th
+          class="border-b dark:border-slate-600 text-xs text-center font-medium p-3 pt-0 pb-3 text-slate-400 dark:text-slate-200">
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white dark:bg-slate-800">
+      <tr>
+        <td>
+          <div class="flex items-center justify-center">
+            <input checked id="checked-checkbox" type="checkbox" value=""
+              class="w-4 h-4 text-emerald-400 bg-emerald-100 border-emerald-300 rounded focus:ring-emerald-500 dark:focus:ring-emerald-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ">
+          </div>
+        </td>
+        <td
+          class="border-b border-slate-100 text-center dark:border-slate-700 p-3 pl-8 text-xs text-emerald-900 dark:text-slate-400">
+          MANEJO DEL PACIENTE EN CONFLICTO ARMADO</td>
+        <td
+          class="border-b border-slate-100 text-center dark:border-slate-700 p-3 text-xs text-emerald-900 dark:text-slate-400">
+          Moises Ripoll Guerr ...
+        </td>
+        <td
+          class="border-b border-slate-100 text-center dark:border-slate-700 p-3 text-xs text-emerald-900 dark:text-slate-400">
+          Diplomado
+        </td>
+        <td
+          class="border-b border-slate-100 text-center dark:border-slate-700 p-3 text-xs text-emerald-900 dark:text-slate-400">
+          $50.000,00
+        </td>
+        <td
+          class="border-b border-slate-100 text-center dark:border-slate-700 p-3 text-xs text-emerald-900 dark:text-slate-400">
+          2023-03-27
+        </td>
+
+        <td
+          class="border-b border-slate-100 text-center dark:border-slate-700 p-4 text-xs text-emerald-900 dark:text-slate-400">
+          <button type="button" aria-expanded="false" (click)="isOpenOptionsTable = !isOpenOptionsTable"
+            cdkOverlayOrigin #menuOverlayOptionsTable="cdkOverlayOrigin"
+            class="w-8 h-8 rounded-full text-2xl text-gray-400 transition-all hover:bg-gray-200 focus:bg-gray-200 focus-within:bg-gray-200 hover:text-emerald-900 focus:text-emerald-900 focus-within:text-emerald-900">
+            <fa-icon [icon]="['fas', 'ellipsis']"></fa-icon>
+          </button>
+        </td>
+
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+  <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+    <div class="flex flex-1 justify-between sm:hidden">
+      <a href="#"
+        class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+      <a href="#"
+        class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+    </div>
+    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+      <div>
+        <p class="text-xs text-gray-400">
+          Mostrando
+          <span>1</span>
+          de
+          <span>10</span>
+          <span>97</span>
+          resultados
+        </p>
+      </div>
+      <div class="mx-auto">
+        <nav class="isolate inline-flex -space-x-px rounded-md " aria-label="Pagination">
+          <a href="#"
+            class="relative inline-flex items-center rounded-l-md  px-2 py-2 text-sm font-medium text-emerald-900 hover:bg-gray-50 focus:z-20">
+            <span class="sr-only">Previous</span>
+            <div class="w-6 h-6 flex items-center justify-center">
+              <fa-icon [icon]="['fas','caret-left']"></fa-icon>
+            </div>
+          </a>
+          <a href="#" aria-current="page"
+            class="relative z-10 inline-flex items-center px-4 py-2 text-sm font-medium text-emerald-500 focus:z-20">1</a>
+          <a href="#"
+            class="relative inline-flex items-center  px-4 py-2 text-sm font-medium text-emerald-900 hover:bg-gray-50 focus:z-20">2</a>
+          <a href="#"
+            class="relative hidden items-center  px-4 py-2 text-sm font-medium text-emerald-900 hover:bg-gray-50 focus:z-20 md:inline-flex">3</a>
+          <span class="relative inline-flex items-center  px-4 py-2 text-sm font-medium text-gray-700">...</span>
+          <a href="#"
+            class="relative hidden items-center  px-4 py-2 text-sm font-medium text-emerald-900 hover:bg-gray-50 focus:z-20 md:inline-flex">8</a>
+          <a href="#"
+            class="relative inline-flex items-center  px-4 py-2 text-sm font-medium text-emerald-900 hover:bg-gray-50 focus:z-20">9</a>
+          <a href="#"
+            class="relative inline-flex items-center  px-4 py-2 text-sm font-medium text-emerald-900 hover:bg-gray-50 focus:z-20">10</a>
+          <a href="#"
+            class="relative inline-flex items-center rounded-r-md  px-2 py-2 text-sm font-medium text-emerald-900 hover:bg-gray-50 focus:z-20">
+            <span class="sr-only">Next</span>
+            <div class="w-6 h-6 flex items-center justify-center">
+              <fa-icon [icon]="['fas','caret-right']"></fa-icon>
+            </div>
+          </a>
+        </nav>
+      </div>
+      <div class="flex items-center">
+        <p class="text-xs text-gray-400 mr-2">
+          Registros por página
+        </p>
+        <div>
+          <div class="relative mt-1">
+            <button type="button"
+              class="relative w-full cursor-default rounded-full border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 sm:text-sm"
+              aria-expanded="false" (click)="isOpenOptionsPages = !isOpenOptionsPages" cdkOverlayOrigin
+              #menuOverlayOptionsPages="cdkOverlayOrigin">
+              <span class="flex items-center">
+                <span class="ml-3 block truncate">10</span>
+              </span>
+              <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
+                <fa-icon [icon]="['fas','chevron-down']"></fa-icon>
+              </span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="menuOverlayFilter"
+    [cdkConnectedOverlayOpen]="isOpenFilter">
+    <div class="z-50 my-4 w-96 text-base list-none bg-white border border-gray-400 rounded-lg  shadow">
+      <div class="py-3 px-4 flex items-center border-b border-gray-400">
+        <span class="block text-center text-emerald-900 font-bold">Filtros</span>
+        <a role="button" class="block ml-auto mr-3 underline text-emerald-900 text-xs font-medium">Borrar todo</a>
+        <button (click)="isOpenFilter = !isOpenFilter" class="block text-sm text-gray-900">
+          <fa-icon [icon]="['fas', 'times']"></fa-icon>
+        </button>
+      </div>
+      <div class="pt-3 px-4 ">
+        <div class="border-b border-gray-400">
+          <p class="mb-3 font-bold text-emerald-900 text-sm">
+            Filtros aplicados
+          </p>
+          <div class="flex items-center gap-2 pb-4 flex-wrap">
+            <button type="button"
+              class="h-8 font-bold text-white border border-emerald-900 bg-emerald-900 rounded-full text-center flex items-center text-xs pr-4">
+              <div class="w-7 h-7 flex items-center justify-center">
+                <fa-icon [icon]="['fas','times']"></fa-icon>
+              </div>
+              Activo
+            </button>
+            <button type="button"
+              class="h-8 font-bold text-white border border-emerald-900 bg-emerald-900 rounded-full text-center flex items-center text-xs pr-4">
+              <div class="w-7 h-7 flex items-center justify-center">
+                <fa-icon [icon]="['fas','times']"></fa-icon>
+              </div>
+              23-03-27 a 23-04-30
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class=" px-4 mb-3">
+        <div id="accordion-flush" data-accordion="collapse"
+          data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+          data-inactive-classes="text-gray-500 dark:text-gray-400">
+          <cdk-accordion>
+            <cdk-accordion-item #accordionMenuMes="cdkAccordionItem">
+              <h2 id="accordion-flush-heading-1">
+                <button (click)="accordionMenuMes.toggle()" type="button"
+                  class="flex items-center justify-between w-full py-2 font-medium text-left text-emerald-900 border-b border-gray-400 dark:border-emerald-900 dark:text-emerald-900"
+                  data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+                  aria-controls="accordion-flush-body-1">
+                  <span class="font-bold text-sm">Mes</span>
+                  <fa-icon [icon]="['fas','chevron-down']"></fa-icon>
+                </button>
+              </h2>
+              <div id="accordion-flush-body-1" [style.display]="accordionMenuMes.expanded ? '' : 'none'"
+                aria-labelledby="accordion-flush-heading-1">
+                <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive
+                    components
+                    built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+                  <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
+                      href="/docs/getting-started/introduction/"
+                      class="text-emerald-600 dark:text-emerald-500 hover:underline">get
+                      started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+                </div>
+              </div>
+            </cdk-accordion-item>
+          </cdk-accordion>
+          <cdk-accordion>
+            <cdk-accordion-item #accordionMenuYear="cdkAccordionItem">
+
+              <h2 id="accordion-flush-heading-2">
+                <button (click)="accordionMenuYear.toggle()" type="button" class="flex items-center justify-between w-full py-2 font-bold text-sm text-left text-emerald-900 border-b border-gray-400 dark:border-emerald-900 dark:text-emerald-900
+                " data-accordion-target=" #accordion-flush-body-2" aria-expanded="false"
+                  aria-controls="accordion-flush-body-2">
+                  <span>Año</span>
+                  <fa-icon [icon]="['fas','chevron-down']"></fa-icon>
+                </button>
+              </h2>
+
+              <div id="accordion-flush-body-2" [style.display]="accordionMenuYear.expanded ? '' : 'none'"
+                aria-labelledby="accordion-flush-heading-2">
+                <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using
+                    the
+                    Figma
+                    software so everything you see in the library has a design equivalent in our Figma file.</p>
+                  <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
+                      class="text-emerald-600 dark:text-emerald-500 hover:underline">Figma design system</a> based on
+                    the
+                    utility
+                    classes
+                    from Tailwind CSS and components from Flowbite.</p>
+                </div>
+              </div>
+
+            </cdk-accordion-item>
+          </cdk-accordion>
+
+          <cdk-accordion>
+            <cdk-accordion-item #accordionMenuDesdeHasta="cdkAccordionItem">
+              <h2 id="accordion-flush-heading-3">
+                <button (click)="accordionMenuDesdeHasta.toggle()" type="button"
+                  class="flex items-center justify-between w-full py-2 font-bold text-sm text-left text-emerald-900 border-b border-gray-400 dark:border-emerald-900 dark:text-emerald-900"
+                  data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
+                  aria-controls="accordion-flush-body-3">
+                  <span>Desde/Hasta</span>
+                  <fa-icon [icon]="['fas','chevron-down']"></fa-icon>
+                </button>
+              </h2>
+              <div id="accordion-flush-body-3" [style.display]="accordionMenuDesdeHasta.expanded ? '' : 'none'"
+                aria-labelledby="accordion-flush-heading-3">
+                <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from
+                    Flowbite are
+                    open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that
+                    Flowbite
+                    relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
+                    Flowbite Pro,
+                    and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.
+                  </p>
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                  <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+                    <li><a href="https://flowbite.com/pro/"
+                        class="text-emerald-600 dark:text-emerald-500 hover:underline">Flowbite
+                        Pro</a></li>
+                    <li><a href="https://tailwindui.com/" rel="nofollow"
+                        class="text-emerald-600 dark:text-emerald-500 hover:underline">Tailwind UI</a></li>
+                  </ul>
+                </div>
+              </div>
+            </cdk-accordion-item>
+          </cdk-accordion>
+
+          <cdk-accordion>
+            <cdk-accordion-item #accordionMenuEstado="cdkAccordionItem">
+              <h2 id="accordion-flush-heading-3">
+                <button (click)="accordionMenuEstado.toggle()" type="button"
+                  class="flex items-center justify-between w-full py-2 font-bold text-sm text-left text-emerald-900 border-b border-gray-400 dark:border-emerald-900 dark:text-emerald-900"
+                  data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
+                  aria-controls="accordion-flush-body-3">
+                  <span>Estado</span>
+                  <fa-icon [icon]="['fas','chevron-down']"></fa-icon>
+                </button>
+              </h2>
+              <div id="accordion-flush-body-3" [style.display]="accordionMenuEstado.expanded ? '' : 'none'"
+                aria-labelledby="accordion-flush-heading-3">
+                <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from
+                    Flowbite are
+                    open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that
+                    Flowbite
+                    relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
+                    Flowbite Pro,
+                    and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.
+                  </p>
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                  <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+                    <li><a href="https://flowbite.com/pro/"
+                        class="text-emerald-600 dark:text-emerald-500 hover:underline">Flowbite
+                        Pro</a></li>
+                    <li><a href="https://tailwindui.com/" rel="nofollow"
+                        class="text-emerald-600 dark:text-emerald-500 hover:underline">Tailwind UI</a></li>
+                  </ul>
+                </div>
+              </div>
+            </cdk-accordion-item>
+          </cdk-accordion>
+
+        </div>
+      </div>
+      <ul class="p-3">
+        <li>
+          <button type="button"
+            class="h-10 font-bold text-white border border-emerald-900 bg-emerald-900 rounded-full text-center flex justify-center items-center text-sm mx-auto w-full">
+            Aplicar (123)
+          </button>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="menuOverlayOptionsTable"
+    [cdkConnectedOverlayOpen]="isOpenOptionsTable">
+    <div class="z-50 my-4 w-40 text-base list-none bg-white border border-gray-400 rounded-lg  shadow">
+      <ul>
+        <li class="px-3 py-2">
+          <a role="button" class="text-xs">Ver detalle</a>
+        </li>
+        <li class="p-3">
+          <a role="button" class="text-xs">Eliminar</a>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="menuOverlayOptionsPages"
+    [cdkConnectedOverlayOpen]="isOpenOptionsPages">
+    <ul
+      class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+      tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
+      <li class="text-gray-900 relative cursor-pointer select-none py-2 pl-3 pr-9" id="listbox-option-0" role="option">
+        <div class="flex items-center">
+          <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+          <span class="font-normal ml-3 block truncate">20</span>
+        </div>
+      </li>
+      <li class="text-gray-900 relative cursor-pointer select-none py-2 pl-3 pr-9" id="listbox-option-0" role="option">
+        <div class="flex items-center">
+          <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+          <span class="font-normal ml-3 block truncate">50</span>
+        </div>
+      </li>
+      <li class="text-gray-900 relative cursor-pointer select-none py-2 pl-3 pr-9" id="listbox-option-0" role="option">
+        <div class="flex items-center">
+          <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+          <span class="font-normal ml-3 block truncate">100</span>
+        </div>
+      </li>
+    </ul>
+  </ng-template>
+
+</div>

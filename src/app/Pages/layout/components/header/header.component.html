@@ -1,0 +1,60 @@
+<div class="p-4">
+  <div class="w-full h-16 relative z-10 rounded-lg p-3 shadow bg-white">
+    <div class="w-full h-full flex items-center ">
+      <div class="flex items-center ml-auto">
+        <button type="button"
+          class="ml-auto mr-3 flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200 focus:ring-offset-2 focus:ring-offset-emerald-500">
+          <span class="sr-only">View notifications</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          </svg>
+        </button>
+        <button type="button" class="flex rounded-full  mr-2" aria-expanded="false" type="button"
+          (click)="isOpen = !isOpen" cdkOverlayOrigin #menuOverlay="cdkOverlayOrigin">
+          <img class="w-8 h-8 rounded-full" src="https://api.lorem.space/image/face?w=400&h=400" alt="user photo" />
+        </button>
+        <span class="text-xs">
+          Jesus de la Rotta
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="menuOverlay" [cdkConnectedOverlayOpen]="isOpen">
+  <div class="z-50 my-4 w-60 text-base list-none bg-white rounded divide-y divide-gray-100 shadow">
+    <div class="py-3 px-4 flex justify-between">
+      <span class="block text-sm text-center text-gray-900">Cuenta</span>
+      <button (click)="isOpen = !isOpen" class="block text-sm text-gray-900">
+        <fa-icon [icon]="['fas', 'times']"></fa-icon>
+      </button>
+    </div>
+    <div class="py-3 px-4 flex items-center space-x-4">
+      <img class="w-10 h-10 rounded-full" src="https://api.lorem.space/image/face?w=400&h=400" alt="" />
+      <div class="space-y-1">
+        <div>Jese Leos</div>
+        <div class="text-sm text-gray-500">nico@gmail.com</div>
+      </div>
+    </div>
+    <ul class="py-1">
+      <li>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Editar
+          perfil</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Configuracion
+          de cuenta</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Ayuda</a>
+      </li>
+    </ul>
+    <ul class="py-1">
+      <li>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700">Cerrar sesion</a>
+      </li>
+    </ul>
+  </div>
+</ng-template>
